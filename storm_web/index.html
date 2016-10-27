@@ -1,85 +1,176 @@
+<!-- I used the Band template on the W3.CSS page -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-    <title>MICHELLE WHANG - IML 300</title>  
-    <link rel="stylesheet" href="css/w3.css">
-  
-</head>
+<html>
+<title>MICHELLE WHANG-IML 300</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css?family=Pacifico">
 <style>
-    
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #FFF333;
+body {font-family: "Lato", sans-serif}
+.w3-pacifico {
+  font-family: 'Pacifico', serif;
 }
-
-li {
-    float: left;
-}
-
-li a, .dropbtn {
-    display: inline-block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
-
-li.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-    
-img {
-    float: right;
-    margin: 0 0 10px 10px;
-}
+.mySlides {display: none}
 </style>
-<body class="w3-container">
-<h2>Michelle Whang's Homepage</h2>
-<ul>
-  <li><a class="active" href="about.html">About Me</a></li>
-  <li><a href="links.html">Links</a></li>
-  <li class="dropdown">
-    <a href="#" class="assignments">Assignments</a>
-    <div class="dropdown-content">
-      <a href="assignments/images/weekone.png">Week 1</a>
+<body>
+
+<!-- The Header -->
+  <div class="w3-pale-red" id="header">
+    <div class="w3-container w3-content w3-padding-55" style="max-width:500px">
+      <h1 class="w3-center w3-pacifico">Michelle Whang</h1>
+      <p class="w3-opacity w3-center"><i>University of Southern California</i></p><br>
+
+    </div>
+  </div>
+<!-- Navbar -->
+<ul class="w3-navbar w3-black w3-card-2 w3-left-align">
+  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+    <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+  </li>
+  <li><a href="http://storm.usc.edu/~whangmic/iml300/" class="w3-hover-none w3-hover-text-grey w3-padding-large">HOME</a></li>
+  <li class="w3-hide-small"><a href="about.html" class="w3-padding-large">ABOUT ME</a></li>
+  <li class="w3-hide-small"><a href="links.html" class="w3-padding-large">FAVE LINKS</a></li>
+  <li class="w3-hide-small w3-dropdown-hover">
+    <a href="javascript:void(0)" class="w3-hover-none w3-padding-large" title="Assignments">ASSIGNMENTS <i class="fa fa-caret-down"></i></a>
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a href="images/homepages/WeekOne.png">Week 1</a>
       <a href="assignments/week2.html">Week 2</a>
-      <a href="assignments/constitution.html">Week 3</a>
+      <a href="assignments/constitution.html">Constitution</a>
       <a href="assignments/week4.html">Week 4</a>
+      <a href="assignments/week5.html">Week 5</a>
+      <a href="assignments/images/flowchart.png">Week 6</a>
     </div>
   </li>
 </ul>
+</div>
 
-<p> <img src="assignments/images/signaturecolor.png" alt="SignatureColor"></p>
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <ul class="w3-navbar w3-left-align w3-black">
+    <li><a class="w3-padding-large" href="http://storm.usc.edu/~whangmic/iml300/">HOME</a></li>
+    <li><a class="w3-padding-large" href="about.html">ABOUT ME</a></li>
+    <li><a class="w3-padding-large" href="links.html">FAVE LINKS</a></li>
+     <li class="w3-hide-small w3-dropdown-hover">
+    <a href="javascript:void(0)" class="w3-hover-none w3-padding-large" title="Assignments">ASSIGNMENTS <i class="fa fa-caret-down"></i></a>
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a href="images/homepages/WeekOne.png">Week 1</a>
+      <a href="assignments/week2.html">Week 2</a>
+      <a href="assignments/constitution.html">Constitution</a>
+      <a href="assignments/week4.html">Week 4</a>
+      <a href="assignments/week5.html">Week 5</a>
+      <a href="assignments/images/flowchart.png">Week 6</a>
+    </div>
+  </li>
+  </ul>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container">
+    <img src="assignments/images/art.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    </div>
+  </div>
+  <div class="mySlides w3-display-container">
+    <img src="assignments/images/helenes.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    </div>
+  </div>
+  <div class="mySlides w3-display-container">
+    <img src="assignments/images/mewow.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    </div>
+  </div>
+   <div class="mySlides w3-display-container">
+    <img src="assignments/images/signaturecolor.png" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    </div>
+  </div>
+  <div class="mySlides w3-display-container">
+    <img src="assignments/images/squad.jpg" style="width:100%">
+    <div class="w3-display-middle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    </div>
+    </div>
+
+<!-- The Header -->
+  <div class="w3-pale-red" id="header">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:500px">
+        <h1 class="w3-wide w3-center w3-pacifico">Welcome to my site!</h1>
+
+    </div>
+  </div>
+  
+<div class="w3-row-padding">
+  <div class="w3-col s4 w3-center w3-panel w3-card-4 w3-light-grey">
+  <p class=" w3-large w3-serif w3-center">
+  <i class="fa fa-quote-right w3-xxlarge w3-text-red"></i><br>
+  Hakuna Matata </p>
+<p class="w3-center"> <i>--The Lion King</i></p>
+</div>
+ <div class="w3-col s4 w3-center w3-panel w3-card-4 w3-light-grey">
+  <p class=" w3-large w3-serif w3-center">
+  <i class="fa fa-quote-right w3-xxlarge w3-text-red"></i><br>
+  When all else fails, take a nap. </p>
+<p class="w3-center"> <i>--Michelle Whang</i></p>
+</div>
+ <div class="w3-col s4 w3-center w3-panel w3-card-4 w3-light-grey">
+  <p class=" w3-large w3-serif w3-center">
+  <i class="fa fa-quote-right w3-xxlarge w3-text-red"></i><br>
+ If it doesn't challenge you, it doesn't change you. </p>
+<p class="w3-center"> <i>--Fred Devito</i></p>
+</div>
+  
+</div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="https://www.facebook.com/michelle.whang.1" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
+  <a href="https://www.linkedin.com/in/michellewhang" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 4000);
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
